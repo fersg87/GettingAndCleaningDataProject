@@ -5,8 +5,8 @@ http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartpho
 Raw data transformation produces a tidy data set that includes both the training and 
 test data sets. Feature names with the format "mean.X" are the avg of the feature X 
 grouped by "Activity" and "Subject". the tidy data set contains the following features:
- [1] "Activity": Descriptive name of activity number. This column is added from Y-test/train files.
- [2] "Subject": Subject id that performed the following measuraments/features                             
+ [1] "Activity"
+ [2] "Subject"
  [3] "mean.tBodyAcc.mean...X."              
  [4] "mean.tBodyAcc.mean...Y."              
  [5] "mean.tBodyAcc.mean...Z."              
@@ -90,13 +90,13 @@ grouped by "Activity" and "Subject". the tidy data set contains the following fe
 
 #Transformations on raw data
 Part 1: Merge the training and the test sets to create one data set.
-  1.1 Training/Test measurements are read into different variables.
-  1.2 Merging (making a union) of both sets using rbind.
+  - Training/Test measurements are read into different variables.
+  - Merging (making a union) of both sets using rbind.
 
 
 Part 2: Extracts only the measurements on the mean and 
 standard deviation for each measurement. 
-  2.1 Features indices are read into a matrix[idx,featureName]
+  - Features indices are read into a matrix[idx,featureName]
   2.2 Features are filtered using grep containing "mean" or "std"
   2.3 DataSet columns are filtered by indices returned in second step.
   2.4 Training/Test activities are read into different variables.
