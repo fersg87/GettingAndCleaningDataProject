@@ -113,4 +113,4 @@ tidyDataTable <- data.table(meanStdDataSet)
 avgTidyDataTable <- tidyDataTable[, lapply(.SD,mean), by=c("Activity","Subject")]
 newColNames = sapply(names(avgTidyDataTable)[-(1:2)], function(name) paste("mean(", name, ")", sep=""))
 setnames(avgTidyDataTable, names(avgTidyDataTable), c("Activity", "Subject", newColNames))
-write.csv(avgTidyDataTable, file="MeasureAvgTidySet.txt", , row.names = FALSE)
+write.csv(avgTidyDataTable, file="MeasureAvgTidySet.txt", row.names = FALSE)
