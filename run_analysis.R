@@ -30,14 +30,6 @@
 ##======================================================
 ## 1.1 Training/Test measurements are read into different variables.
 ## 1.2 Merging (making a union) of both sets using rbind.
-##
-## 1.3 Training/Test activities are read into different variables.
-## 1.4 Merging (making a union) of both sets using rbind.
-##
-## 1.5 Training/Test subjects are read into different variables.
-## 1.6 Merging (making a union) of both sets using rbind.
-##
-## 1.7 Merging measurements,activities,subjects using cbind.
 
 fileName = "UCI HAR Dataset\\train\\X_train.txt"
 trainSet <- read.table(fileName, header=FALSE)
